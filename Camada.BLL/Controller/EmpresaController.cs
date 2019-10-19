@@ -1,4 +1,5 @@
-﻿using Camada.DTO.Clientes;
+﻿using Camada.DAL.Interfaces;
+using Camada.DTO.Clientes;
 using System.Data;
 
 namespace Camada.BLL.Controller

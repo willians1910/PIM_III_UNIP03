@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DAOFactory.cs" />
+    <Compile Include="DAO\PessoasDAO\EmpresaDAO.cs" />
+    <Compile Include="DAO\PessoasDAO\FuncionarioDAO.cs" />
+    <Compile Include="DAO\PessoasDAO\MotoristaDAO.cs" />
+    <Compile Include="DAO\PessoasDAO\VeiculoDAO.cs" />
+    <Compile Include="Interfaces\IEmpresa.cs" />
+    <Compile Include="Interfaces\IFuncionario.cs" />
+    <Compile Include="Interfaces\IMotorista.cs" />
+    <Compile Include="Interfaces\IVeiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

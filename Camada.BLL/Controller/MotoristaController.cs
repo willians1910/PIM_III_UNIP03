@@ -1,4 +1,5 @@
-﻿using Camada.DTO.Pessoas;
+﻿using Camada.DAL.Interfaces;
+using Camada.DTO.Pessoas;
 using System;
 using System.Collections.Generic;
 using System.Data;

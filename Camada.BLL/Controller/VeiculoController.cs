@@ -1,4 +1,5 @@
-﻿using Camada.DTO.Veiculos;
+﻿using Camada.DAL.Interfaces;
+using Camada.DTO.Veiculos;
 using System;
 using System.Collections.Generic;
 using System.Data;
