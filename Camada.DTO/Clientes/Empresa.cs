@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Clientes
 {
-    class Empresa
+    public class Empresa
     {
         private string cnpj;
         private string razaoSocial;

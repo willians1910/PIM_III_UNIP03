@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Pessoas
 {
-    class Motorista : Pessoa
+    public class Motorista : Pessoa
     {
         private string chn;
         private Empresa empresa;

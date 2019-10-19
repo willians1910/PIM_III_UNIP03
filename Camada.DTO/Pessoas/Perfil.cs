@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Pessoas
 {
-    class Perfil
+    public class Perfil
     {
         private string cargo;
 

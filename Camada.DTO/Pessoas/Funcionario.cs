@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Pessoas
 {
-    class Funcionario : Pessoa
+    public class Funcionario : Pessoa
     {
         private Perfil perfil;
 

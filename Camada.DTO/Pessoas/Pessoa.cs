@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Pessoas
 {
-    class Pessoa
+    public class Pessoa
     {
         private long cpf;
         private string rg;

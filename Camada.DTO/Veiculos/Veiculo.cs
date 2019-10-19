@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Veiculos
 {
-    class Veiculo
+    public class Veiculo
     {
         private string placa;
         private string marca;

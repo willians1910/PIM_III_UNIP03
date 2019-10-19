@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO
 {
-    class Endereco
+    public class Endereco
     {
         private string logradouro;
         private int numero;
