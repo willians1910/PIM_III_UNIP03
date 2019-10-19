@@ -42,14 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAOFactory.cs" />
-    <Compile Include="DAO\PessoasDAO\EmpresaDAO.cs" />
+    <Compile Include="DAO\ClientesDAO\EmpresaDAO.cs" />
     <Compile Include="DAO\PessoasDAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PessoasDAO\MotoristaDAO.cs" />
-    <Compile Include="DAO\PessoasDAO\VeiculoDAO.cs" />
-    <Compile Include="Interfaces\IEmpresa.cs" />
-    <Compile Include="Interfaces\IFuncionario.cs" />
-    <Compile Include="Interfaces\IMotorista.cs" />
-    <Compile Include="Interfaces\IVeiculo.cs" />
+    <Compile Include="DAO\VeiculosDAO\VeiculoDAO.cs" />
+    <Compile Include="Interfaces\IClientes\IEmpresa.cs" />
+    <Compile Include="Interfaces\IPessoas\IFuncionario.cs" />
+    <Compile Include="Interfaces\IPessoas\IMotorista.cs" />
+    <Compile Include="Interfaces\IVeiculos\IVeiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,5 +58,6 @@
       <Name>Camada.DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
