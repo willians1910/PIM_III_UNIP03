@@ -11,6 +11,9 @@ namespace Camada.DAL.DAO.PessoasDAO
 {
     class MotoristaDAO : IMotorista
     {
+        Motorista motorista = new Motorista();
+        ConexaoComBanco Banco = new ConexaoComBanco();
+
         public bool Atualizar(Motorista m)
         {
             throw new NotImplementedException();

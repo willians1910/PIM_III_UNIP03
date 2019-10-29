@@ -10,7 +10,7 @@ namespace Camada.BLL.Controller
 
         public EmpresaController()
         {
-            dao = DAOFactory.CriarEmpresaDAO();
+            //dao = DAOFactory.CriarEmpresaDAO();
         }
 
         public bool Inserir(Empresa e)

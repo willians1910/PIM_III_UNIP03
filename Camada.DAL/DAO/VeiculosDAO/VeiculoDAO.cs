@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 
 namespace Camada.DAL.DAO.PessoasDAO
 {
-    class VeiculoDAO : IVeiculo
+  public class VeiculoDAO : IVeiculo
     {
+        Veiculo Veiculo = new Veiculo();
+        ConexaoComBanco banco = new ConexaoComBanco();
+
         public bool Atualizar(Veiculo v)
         {
             throw new NotImplementedException();

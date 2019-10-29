@@ -15,7 +15,7 @@ namespace Camada.BLL.Controller
 
         public FuncionarioController()
         {
-            dao = DAOFactory.CriarFuncionarioDAO();
+            //dao = DAOFactory.CriarFuncionarioDAO();
         }
 
         public bool Inserir(Funcionario f)

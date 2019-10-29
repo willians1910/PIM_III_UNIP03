@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 
 namespace Camada.DAL.DAO.PessoasDAO
 {
-    class EmpresaDAO : IEmpresa
+  public class EmpresaDAO : IEmpresa
     {
+        Empresa empresa = new Empresa();
+        ConexaoComBanco banco = new ConexaoComBanco();
+
         public bool Atualizar(Empresa e)
         {
             throw new NotImplementedException();
@@ -23,7 +26,9 @@ namespace Camada.DAL.DAO.PessoasDAO
 
         public bool Inserir(Empresa e)
         {
+           
             throw new NotImplementedException();
+
         }
 
         public DataSet Listar()

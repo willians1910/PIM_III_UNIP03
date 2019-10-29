@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace Camada.DTO.Pessoas
 {
-    public class Pessoa
+    public class Pessoa : Endereco
     {
+        
+
         private long cpf;
         private string rg;
         private string nome;
         private DateTime dataNasc;
         private char sexo;
         private Endereco endereco;
-        private string cep;
+        //private string cep;
         private string telefone;
 
         public Pessoa()
@@ -22,7 +24,7 @@ namespace Camada.DTO.Pessoas
             this.cpf = 0;
             this.nome = string.Empty;
             this.telefone = string.Empty;
-            this.cep = string.Empty;
+            //this.cep = string.Empty;
             this.endereco = new Endereco();
         }
 
@@ -50,11 +52,11 @@ namespace Camada.DTO.Pessoas
             set { telefone = value; }
         }
 
-        public string Cep
-        {
-            get { return cep; }
-            set { cep = value; }
-        }
+        //public string Cep
+        //{
+        //    get { return cep; }
+        //    set { cep = value; }
+        //}
 
         public string Rg
         {

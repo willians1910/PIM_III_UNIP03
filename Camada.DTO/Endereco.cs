@@ -8,6 +8,8 @@ namespace Camada.DTO
 {
     public class Endereco
     {
+
+       
         private string logradouro;
         private int numero;
         private string complemento;
