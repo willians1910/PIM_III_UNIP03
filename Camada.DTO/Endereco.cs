@@ -18,6 +18,11 @@ namespace Camada.DTO
         private string municipio;
         private string cidade;
 
+
+
+
+
+
         public string Logradoura { get => logradouro; set => logradouro = value; }
         public int Numero { get => numero; set => numero = value; }
         public string Complemento { get => complemento; set => complemento = value; }
