@@ -18,6 +18,9 @@ namespace Camada.BLL.Controller
             //dao = DAOFactory.CriarMotoristaDAO();
         }
 
+
+
+
         public bool Inserir(Motorista m)
         {
             return dao.Inserir(m);
