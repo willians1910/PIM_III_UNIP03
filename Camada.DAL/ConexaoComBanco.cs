@@ -23,7 +23,7 @@ namespace Camada.DAL
         public SqlConnection cn;
         public void Connection()
         {
-            string conexao = @"Data Source=LAPTOP-38LG1OCB\SQLEXPRESS;Initial Catalog=BD_UNIP;Integrated Security=True";
+            string conexao = @"Data Source=LAPTOP-38LG1OCB\SQLEXPRESS;Initial Catalog=PIM7;Integrated Security=True";
             //string constr = ConfigurationManager.ConnectionStrings["conexao"].ToString();
 
             cn = new SqlConnection(conexao);

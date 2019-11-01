@@ -49,7 +49,7 @@ namespace ProjetoWebFacu
                 funcionario.perfil.cargo = CargoTextBox.Text;
                 funcionario.perfil.Salario = Convert.ToDecimal(SalarioTextBox.Text);
 
-                salvar.Inserir(funcionario);
+                 salvar.Inserir(funcionario);
 
             }
             catch (Exception ex)

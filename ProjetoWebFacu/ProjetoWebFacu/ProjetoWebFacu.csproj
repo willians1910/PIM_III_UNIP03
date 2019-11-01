@@ -162,7 +162,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MasterGabriel\PIM_III_UNIP03-master\Camada.DTO\Camada.DTO.csproj">
+    <ProjectReference Include="..\..\Camada.DTO\Camada.DTO.csproj">
       <Project>{0ea55132-16a5-45b9-8174-22b3bf9160a4}</Project>
       <Name>Camada.DTO</Name>
     </ProjectReference>
