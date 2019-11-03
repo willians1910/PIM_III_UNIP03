@@ -8,7 +8,7 @@ namespace Camada.DTO.Pessoas
 {
     public class Perfil
     {
+        public int id { get; set; }
         public string cargo { get; set; }
-        public decimal Salario { get; set; }
     }
 }

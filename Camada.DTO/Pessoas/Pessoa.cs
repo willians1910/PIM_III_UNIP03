@@ -24,9 +24,9 @@ namespace Camada.DTO.Pessoas
             this .telefone = new List<Telefone>();
         }
 
-        //public void AddTelefone(Telefone t)
-        //{
-        //    this.telefone.Add(t);
-        //}
+        public void AddTelefone(Telefone t)
+        {
+            this.telefone.Add(t);
+        }
     }
 }

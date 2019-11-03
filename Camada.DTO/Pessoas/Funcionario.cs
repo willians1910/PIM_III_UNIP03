@@ -9,8 +9,8 @@ namespace Camada.DTO.Pessoas
     public class Funcionario : Pessoa
     {
         public Perfil perfil { get; set; }
+        public decimal salario { get; set; }
 
-    
 
         public Funcionario()
         {

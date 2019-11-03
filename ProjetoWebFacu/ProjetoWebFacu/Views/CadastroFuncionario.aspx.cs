@@ -43,11 +43,19 @@ namespace ProjetoWebFacu
                 funcionario.nome = NomeTextBox.Text;
                 funcionario.dataNasc = Convert.ToDateTime(DatanascTextBox2.Text);
                 funcionario.sexo = SexoTextBox.Text;
-                funcionario._Tel_DDI = Convert.ToInt32(DddTextBox2.Text);
-                funcionario.Tel_DDD= Convert.ToInt32(TelefoneTextBox.Text);
-                funcionario.Tel_telefone = Convert.ToInt32(TelefoneTextBox.Text);
-                funcionario.perfil.cargo = CargoTextBox.Text;
-                funcionario.perfil.Salario = Convert.ToDecimal(SalarioTextBox.Text);
+
+                Telefone t = new Telefone();
+
+                t.DDI = Convert.ToInt32(DddTextBox2.Text);
+                t.DDD = Convert.ToInt32(TelefoneTextBox.Text);
+                t.telefone = Convert.ToInt32(TelefoneTextBox.Text);
+
+                funcionario.telefone.Add(t);
+
+                
+                funcionario.perfil.id = 1;
+                funcionario.salario = Convert.ToDecimal(SalarioTextBox.Text);
+                funcionario.endereco.ENDE_cep = 121212;
 
                  salvar.Inserir(funcionario);
 

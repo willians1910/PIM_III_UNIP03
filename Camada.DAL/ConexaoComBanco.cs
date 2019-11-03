@@ -71,6 +71,7 @@ namespace Camada.DAL
         {
             if (AbrirConexao() == true)
             {
+             
                 cmd = new SqlCommand(sql, conexao);
                 int i = cmd.ExecuteNonQuery();
                 Console.WriteLine("Executado :", i);
@@ -78,5 +79,24 @@ namespace Camada.DAL
             }
 
         }
+        //RETORNA O ULTIMO ID ADICIONADO
+        public int ExecutarComandocomID(string sql)
+        {
+            //MensagemErro = "";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+                Int32 id = Convert.ToInt32(cmd.ExecuteScalar());
+                return id;
+            }
+            catch (Exception e)
+            {
+                //MensagemErro = "Método: ExecutarComando()\nErro: " + e.Message;
+                Console.WriteLine("Erro :", e);
+                return -1;
+            }
+        }
+
+
     }
 }
