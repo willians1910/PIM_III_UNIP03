@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,29 +9,32 @@ using System.Threading.Tasks;
 
 namespace Camada.DAL
 {
-    class ConexaoComBanco
+    public class ConexaoComBanco
     {
         // objeto de conexão com o SQL
-        public static SqlConnection conexao;
+        private SqlConnection conexao;
+        protected SqlCommand cmd;
 
-        public void ConexaoSQL()
+
+        public ConexaoComBanco()
         {
-            //Inicializar()
-            Connection();
+            Inicializar();
         }
 
-
-        public SqlConnection cn;
-        public void Connection()
+        public void Inicializar()
         {
-            string conexao = @"Data Source=LAPTOP-38LG1OCB\SQLEXPRESS;Initial Catalog=PIM7;Integrated Security=True";
-            //string constr = ConfigurationManager.ConnectionStrings["conexao"].ToString();
+            if (conexao == null)
+            {
+                // string de conexão com o MySQL obtida do arquivo App.config
+                string constr = ConfigurationManager.ConnectionStrings["Conexao"].ConnectionString;
 
-            cn = new SqlConnection(conexao);
+                conexao = new SqlConnection(constr);
+            }
         }
 
         public bool AbrirConexao()
         {
+
             try
             {
                 if (conexao.State != ConnectionState.Open)
@@ -41,7 +45,8 @@ namespace Camada.DAL
             }
             catch (SqlException e)
             {
-                Console.Write("Erro de Conexao SQL: " + e);
+                //MessageBox.Show("Erro de Conexao MySQL: " + e) MYSQL;
+                //MessageBox.Show("Erro de Conexão SQLServer" + e);
             }
             return false;
         }
@@ -55,41 +60,23 @@ namespace Camada.DAL
             }
             catch (SqlException e)
             {
-                Console.WriteLine("Erro ao fechar Conexao SQL: " + e);
+                //MessageBox.Show("Erro ao fechar Conexao SQLServer: " + e);-
                 Console.WriteLine(e);
+
             }
             return false;
         }
-        public void ExecutarSemConsulta(string sql)
+
+        public void ExecutarComandoSQL(string sql)
         {
             if (AbrirConexao() == true)
             {
-                // cria um objeto SqlCommand
-                SqlCommand cmd = new SqlCommand();
-                // define a conexao com o SQL que será utilizada
-                cmd.Connection = conexao;
-                // define o texto do comando SQL que será executado
-                cmd.CommandText = sql;
-                // executa o comando de INSERT / UPDATE / DELETE
-                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand(sql, conexao);
+                int i = cmd.ExecuteNonQuery();
+                Console.WriteLine("Executado :", i);
                 FecharConexao();
             }
-        }
 
-        public SqlDataReader ExecutarConsulta(string sql)
-        {
-            if (AbrirConexao() == true)
-            {
-                // cria um objeto SqlCommand
-                SqlCommand cmd = new SqlCommand();
-                // define a conexao com o SQL que será utilizada
-                cmd.Connection = conexao;
-                // define o texto do comando SQL que será executado
-                cmd.CommandText = sql;
-                // executa o comando de SELECT e retorna um objeto MySqlDataReader
-                return cmd.ExecuteReader();
-            }
-            return null;
         }
     }
 }
